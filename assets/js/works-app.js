@@ -51,4 +51,6 @@ function drawTop(targets, counts) {
         if (counts[i] > counts[maxIdx]) maxIdx = i;
     }
     topBox.textContent = `가장 자주 나온 글자: ${targets[maxIdx]} (${counts[maxIdx]}번)`;
+    topBox.style.fontWeight = "bold";
+    topBox.style.color = "crimson";
 }
