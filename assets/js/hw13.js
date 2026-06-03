@@ -13,7 +13,7 @@ function extractBody(text) {
 function getWords(text) {
     return text
         .toLowerCase()
-        .replace(/[.,!?;:'"‘’“”()\[\]_*]/g, " ")
+        .replace(/[.,!?;:'"‘’“”()\[\]_*-]/g, " ")
         .split(/\s+/)
         .filter(w => w.length > 0);
 }
@@ -23,7 +23,7 @@ function removeStopwords(words, stopwords) {
 }
 
 function countWords(words) {
-    const counts = {}; //빈 배열 초기화
+    const counts = {}; 
     for (const word of words) {
         counts[word] = (counts[word] || 0) + 1;
     }
@@ -59,14 +59,15 @@ function drawChart(selector, top, color) {
     });
 }
 
-// --- 메인: 세 파일을 동시에 fetch ---
+// --- 메인: 세 파일을 동시에 fetch + 고유 불용어 ---
 Promise.all([
     fetch("/data/frankenstein.txt").then(r => r.text()),
     fetch("/data/dracula.txt").then(r=> r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
-]).then(([frankText, dracText, baseStop]) => {
+    fetch("/data/stopwords-custom.txt").then(r=> r.text()), // 커스텀 불용어 추가
+]).then(([frankText, dracText, baseStop, customStop]) => {
     
-    const stopwords = baseStop
+    const stopwords = (baseStop + "\n" + customStop)
         .split(/\s+/)
         .filter(w=> w.length > 0);
 
