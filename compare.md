@@ -15,5 +15,7 @@ permalink: /compare/
         <div style="height: 500px;"><canvas id="chart-hound"></canvas></div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% include chartjs.html %}
+<script src=”/assets/js/analysis.js”></script>
 <script src="/assets/js/compare.js"></script>
