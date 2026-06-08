@@ -4,7 +4,7 @@ title: "텍스트 분석기"
 permalink: /analyzer/
 ---
 <h2>영문 텍스트 단어 빈도 분석기</h2>
-<p>아래 칸에 영어 텍스트를 붙여 넣고 ``분석'' 버튼을 누르세요. 상위 20개 단어가 표시됩니다.</p>
+<p>아래 칸에 영어 텍스트를 붙여 넣고 "분석" 버튼을 누르세요. 상위 20개 단어가 표시됩니다.</p>
 
 <textarea id="input-text" rows="10" style="width: 100%;"
           placeholder="여기에 영어 텍스트를 붙여 넣으세요..."></textarea>
