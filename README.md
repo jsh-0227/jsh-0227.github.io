@@ -1,2 +1,14 @@
-# jsh-0227.username.github.io
-My personal website
+# 정수호의 인문데이터과학 사이트
+
+서울대학교 [인문데이터과학개론] (2026-1) 수업에서 만든 개인 포트폴리오 사이트입니다.
+
+**공개 주소**: https://jsh-0227.github.io
+
+## 구성
+- **홈**: 소개와 프로젝트 카드
+- **블로그(`_posts/`)**: 수업 노트와 책 리뷰
+- **두 소설 비교(`/compare/`)**: 셜록 홈즈 두 작품의 단어 빈도 비교
+- **텍스트 분석기(`/analyzer/`)**: 임의의 영문 텍스트의 단어 빈도 시각화
+
+## 사용 기술
+Jekyll · GitHub Pages · Chart.js · HTML/CSS JavaScript
