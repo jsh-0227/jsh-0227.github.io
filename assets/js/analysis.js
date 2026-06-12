@@ -2,7 +2,7 @@
 function getWords(text) {
     return text
         .toLowerCase()
-        .replace(/[.,!?;:'"‘’“”()\[\]_*]/g, " ")
+        .replace(/[.,!?;:'"‘’“”()\[\]_*-]/g, " ")
         .split(/\s+/)
         .filter(w => w.length > 0);
 }
